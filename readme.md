@@ -2,9 +2,11 @@
 
 The purpose of this is just to play around with PostgreSQL. It will setup a database, web ui to manage it and fill it with some test tables and data rows.
 
-You can use it as a playground to try different PostgresSQL commands such as `SELECT`, `JOIN`, `INSERT` etc.
+You can pretty much use it as a playground to try different PostgresSQL commands such as `SELECT`, `JOIN`, `INSERT` etc.
 
 After you're done you can easily delete everything or reset to the default state.
+
+Below I provided the diagram for this database so you can check relations.
 
 # Requirements
 
@@ -36,3 +38,7 @@ To stop and reset the database, pgadmin data run the following in the terminal:
 ```bash
 docker compose down -v
 ```
+
+# Diagram
+
+![Diagram](diagram.png "Diagram")
