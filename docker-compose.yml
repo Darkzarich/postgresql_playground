@@ -2,7 +2,7 @@ version: "3.9"
 services:
   postgres:
     container_name: postgres_container
-    image: postgres:14.8-alpine3.18
+    image: postgres:16
     command:
       - "postgres"
       - "-c"
@@ -36,7 +36,7 @@ services:
     environment:
       POSTGRES_DB: ${POSTGRES_DB:-testdb}
       POSTGRES_USER: ${POSTGRES_USER:-admin}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-1234}"
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-1234}
       PGDATA: "/var/lib/postgresql/data/pgdata"
     volumes:
       - ./scripts:/docker-entrypoint-initdb.d
@@ -60,7 +60,7 @@ services:
 
   pgadmin:
     container_name: pgadmin_container
-    image: dpage/pgadmin4:7.2
+    image: dpage/pgadmin4:7.8
     environment:
       PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-test@gmail.com}
       PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-1234}
